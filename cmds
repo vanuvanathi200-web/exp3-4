@@ -1,0 +1,58 @@
+EXPERIMENT 3 – CODE AND COMMANDS
+
+File name: main.py
+
+PROGRAM:
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello World!"
+
+if __name__ == '__main__':
+    app.run(port=8080)
+
+COMMANDS:
+
+pip install flask
+python main.py
+
+Browser:
+http://localhost:8080/
+
+
+EXPERIMENT 4 – CODE AND COMMANDS
+
+File name: index.py
+
+PROGRAM:
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return """
+    <html>
+    <head><title>GAE Launcher</title></head>
+    <body>
+    <h1>Hello from GAE Launcher</h1>
+    <p>Second application on port 8081</p>
+    </body>
+    </html>
+    """
+
+if __name__ == '__main__':
+    app.run(port=8081, debug=True)
+
+COMMANDS:
+
+pip install flask
+python index.py
+
+Browser:
+http://localhost:8081/
